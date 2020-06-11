@@ -20,12 +20,12 @@ jobs:
 
     steps:
     - name: Run linters
-        uses: samuelmeuli/lint-action@v1.5.3
-        with:
-          github_token: ${{ secrets.github_token }}
-          # Enable linters
-          eslint: true
-          prettier: true
+      uses: samuelmeuli/lint-action@v1.5.3
+      with:
+        github_token: ${{ secrets.github_token }}
+        # Enable linters
+        eslint: true
+        prettier: true
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
