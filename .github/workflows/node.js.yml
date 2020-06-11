@@ -27,7 +27,7 @@ jobs:
     - run: npm ci
     - name: Install Node.js dependencies and set up linters
       run: npm install
-      run: eslint --init
+    run: eslint --init
     - name: Run linters
       uses: samuelmeuli/lint-action@v1.5.3
       with:
