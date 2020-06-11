@@ -2,13 +2,16 @@
   "name": "finriq",
   "version": "2.0.0",
   "description": "Bot designed for The Bookery",
-  "main": "bot.js",
+  "main": "node bot.js",
+  "engines": {
+    "node": "8.4.0"
+  },
   "author": "Benjamin Hollon",
   "dependencies": {
+    "bot.js": "0.0.1",
     "data-store": "^4.0.3",
     "discord.js": "^11.5.1",
     "eslint-plugin-jest": "^22.17.0",
-    "habitica": "^4.0.0",
     "mysql2": "^2.0.2",
     "rss-parser": "^3.7.2",
     "sequelize": "^5.21.3",
