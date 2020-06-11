@@ -1,0 +1,30 @@
+{
+  "prefix": ".",
+  "modules": [
+    "Utility",
+    "Fun",
+    "Games",
+    "Writing"
+  ],
+  "version": "2.2.3",
+  "versioninfo": "Added the bookmark feature! Use :red_bookmark: to bookmark any message. Added welcome feature.",
+  "playing": "welcoming our new members!",
+  "channelReacts": [{
+    "channel":"711269048591056916",
+    "react": "👋"
+  },
+  {
+    "channel": "705240176842113024",
+    "react": "💯"  
+  }],
+  "channels": {
+    "tos": "693628747659608064",
+    "welcome": "693500714223272007",
+    "logs": "693512715016208445"
+  },
+  "emotes": {
+    "acceptTOS": "📕",
+    "bookmark": "695723866990968972",
+    "wave": "👋"
+  }
+}
