@@ -25,9 +25,8 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
-    - name: Install Node.js dependencies and set up linters
+    - name: Install Node.js dependencies
       run: npm install
-    - run: eslint --init
     - name: Run linters
       uses: samuelmeuli/lint-action@v1.5.3
       with:
