@@ -49,4 +49,4 @@ try {
 // Connect to given database
 connect.instantiateConnection();
 
-client.login(process.env.BOT_TOKEN);
+client.login('NzEyNjk4NDM0NjcwMjk3MTA4.XuKZuw.cgKYwdcjXrXEc0rJ7gziq1LLTBs'); /*process.env.BOT_TOKEN*/
