@@ -30,6 +30,7 @@ jobs:
       with:
         github_token: ${{ secrets.github_token }}
         # Enable linters
-        xo: true
+        eslint: true
+        prettier: true
     - run: npm run build --if-present
     - run: npm test
