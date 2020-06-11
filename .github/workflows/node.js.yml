@@ -32,6 +32,5 @@ jobs:
       if: ${{ github.event_name == 'push' || github.event.pull_request.head.repo.full_name == github.repository }} 
       with:
         repo-token: ${{secrets.GITHUB_TOKEN}}
-        source-root: optional-sub-dir
     - run: npm run build --if-present
     - run: npm test
