@@ -1,4 +1,4 @@
-module.exports.execute = async (message) => {
+module.exports.execute = async (client, message) => {
   return await message.channel.send(
     Math.random() < 0.5 ? ':beverage_box:' : ':fox:'
   );

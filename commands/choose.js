@@ -6,14 +6,6 @@ module.exports.execute = async (client, message, args) => {
       return await message.channel.send('Choices cannot be empty!');
     }
 
-    if (args.includes('zach')) {
-      return await message.channel.send('I choose **zach**!');
-    }
-
-    if (args.includes('Zach')) {
-      return await message.channel.send('I choose **Zach**!');
-    }
-
     const choiceIndex = Math.floor(Math.random() * args.length);
     return await message.channel.send(
       'I choose **' + args[choiceIndex] + '**!'

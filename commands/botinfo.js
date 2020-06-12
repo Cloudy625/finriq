@@ -3,7 +3,7 @@ const fields = require('../config.json');
 const version = fields.version;
 const versioninfo = fields.versioninfo;
 
-module.exports.execute = async (message) => {
+module.exports.execute = async (client, message) => {
   let infoMessage = new Discord.RichEmbed()
     .setColor('#750384')
     .setTitle('Finriq')

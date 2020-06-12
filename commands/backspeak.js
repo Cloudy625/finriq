@@ -1047,7 +1047,7 @@ function timedifference(timestamp1, timestamp2) {
   return difference;
 }
 
-module.exports.execute = async (message) => {
+module.exports.execute = async (client, message) => {
   Backspeak.sync().then(() =>
     Backspeak.findAll({
       where: {
