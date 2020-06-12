@@ -1055,7 +1055,7 @@ module.exports.execute = async (client, message) => {
       },
     }).then((result) => {
       if (result.length < 1) {
-        gameStart(words, message);
+        gameStart(message);
       } else {
         if (timedifference(result[0].started, Date.now()) >= 1) {
           Backspeak.destroy({
@@ -1063,7 +1063,7 @@ module.exports.execute = async (client, message) => {
               gameName: 'backspeak',
             },
           }).then(() => {
-            gameStart(words, message);
+            gameStart(message);
           });
         } else {
           message.channel.send(
