@@ -1,4 +1,4 @@
-const config = require("../config.json");
+const config = require('../config.json');
 
 class tosActions {
   static userAcceptsTOS(reaction, user, client) {

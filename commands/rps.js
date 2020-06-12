@@ -1,10 +1,10 @@
 module.exports.execute = async (client, message) => {
   try {
-    message.channel.send("**Rock...**");
+    message.channel.send('**Rock...**');
     setTimeout(function () {
-      message.channel.send("**Paper...**");
+      message.channel.send('**Paper...**');
       setTimeout(function () {
-        message.channel.send("**Scissors!!!**");
+        message.channel.send('**Scissors!!!**');
       }, 4000);
     }, 4000);
   } catch (err) {
@@ -13,9 +13,9 @@ module.exports.execute = async (client, message) => {
 };
 
 module.exports.config = {
-  name: "rockpaperscissors",
-  aliases: ["rps"],
-  module: "Games",
-  description: "Starts a rock paper scissors game.",
-  usage: ["rockpaperscissors"],
+  name: 'rockpaperscissors',
+  aliases: ['rps'],
+  module: 'Games',
+  description: 'Starts a rock paper scissors game.',
+  usage: ['rockpaperscissors'],
 };

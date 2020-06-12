@@ -1,4 +1,4 @@
-const reactions = require("../config.json").channelReacts;
+const reactions = require('../config.json').channelReacts;
 
 class reactionCheckAction {
   static async checkIfCorrect(message) {
@@ -9,7 +9,7 @@ class reactionCheckAction {
           message.react(obj.react);
         }
       } catch (err) {
-        console.log("Error with reaction." + err);
+        console.log('Error with reaction.' + err);
       }
     }
   }

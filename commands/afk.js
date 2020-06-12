@@ -1,29 +1,29 @@
 // Get the afk Table stored in the SQLite database
-const Afks = require("../databaseFiles/afkTable.js");
+const Afks = require('../databaseFiles/afkTable.js');
 
 module.exports.execute = async (client, message, args) => {
   try {
     if (
-      message.content.toLowerCase().indexOf("good") != -1 &&
-      !message.content.toLowerCase().indexOf("night") != -1 &&
-      !message.content.toLowerCase().indexOf("bookery") != -1
+      message.content.toLowerCase().indexOf('good') != -1 &&
+      !message.content.toLowerCase().indexOf('night') != -1 &&
+      !message.content.toLowerCase().indexOf('bookery') != -1
     ) {
       //pass
     } else {
       message.delete();
     }
   } catch (err) {
-    console.log("Delete error" + err);
+    console.log('Delete error' + err);
   }
 
   const sender = message.author;
 
   var afkMessage;
 
-  if (args[1] == "auto") {
+  if (args[1] == 'auto') {
     afkMessage = args[0];
   } else if (args.length > 0) {
-    afkMessage = args.join(" ");
+    afkMessage = args.join(' ');
   } else {
     afkMessage = "They didn't tell us where they went...";
   }
@@ -47,7 +47,7 @@ module.exports.execute = async (client, message, args) => {
         }
       })
       .catch((err) => {
-        if (err.name == "SequelizeUniqueConstraintError" && args[1] != "auto") {
+        if (err.name == 'SequelizeUniqueConstraintError' && args[1] != 'auto') {
           Afks.destroy({
             where: {
               user: sender.id,
@@ -64,28 +64,28 @@ module.exports.execute = async (client, message, args) => {
                   }!`
                 )
                 .then((delmessage) => delmessage.delete(5000))
-                .catch("Error sending message.");
+                .catch('Error sending message.');
               reaction.message
                 .delete()
                 .catch(() =>
                   console.log(
-                    "Tried deleting afk message that was already deleted"
+                    'Tried deleting afk message that was already deleted'
                   )
                 );
               return;
             }
           });
         }
-        console.error("Afk sequelize error: ", err);
+        console.error('Afk sequelize error: ', err);
       })
   );
 };
 
 module.exports.config = {
-  name: "afk",
-  aliases: ["afk", "away"],
-  module: "Utility",
+  name: 'afk',
+  aliases: ['afk', 'away'],
+  module: 'Utility',
   description:
-    "I will mark you as being away. When people tag you, they will be notified that you are not present.",
-  usage: ["afk [message]"],
+    'I will mark you as being away. When people tag you, they will be notified that you are not present.',
+  usage: ['afk [message]'],
 };

@@ -3,20 +3,20 @@ module.exports.execute = async (client, message, args) => {
     return Math.floor(Math.random() * Math.floor(max));
   }
 
-  if (getRandomInt(100) == 99 && typeof args[0] !== "undefined") {
+  if (getRandomInt(100) == 99 && typeof args[0] !== 'undefined') {
     if (parseInt(args[0])) {
       return await message.channel.send(`_Shoots <@${args[0]}> violently._`);
     } else {
-      var name = args.join(" ");
+      var name = args.join(' ');
       //Replace with mention if possible
       message.channel.members.forEach((member) => {
         if (
           member.displayName.toLowerCase().indexOf(name.toLowerCase()) != -1 ||
           member.user.username.toLowerCase().indexOf(name.toLowerCase()) != -1
         )
-          name = "<@" + member.id + ">";
+          name = '<@' + member.id + '>';
       });
-      if (name != "@everyone") {
+      if (name != '@everyone') {
         return await message.channel.send(`_Shoots ${name} violently._`);
       } else {
         return await message.channel.send(`_Genocide._`);
@@ -30,9 +30,9 @@ module.exports.execute = async (client, message, args) => {
 };
 
 module.exports.config = {
-  name: "shoot",
-  aliases: ["gun", "kill"],
-  module: "Fun",
-  description: "Shoots specified user.",
-  usage: ["shoot [user]"],
+  name: 'shoot',
+  aliases: ['gun', 'kill'],
+  module: 'Fun',
+  description: 'Shoots specified user.',
+  usage: ['shoot [user]'],
 };

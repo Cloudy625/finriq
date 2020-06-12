@@ -1,14 +1,14 @@
-const Discord = require("discord.js");
-const logschannel = require("../config.json").channels.logs;
+const Discord = require('discord.js');
+const logschannel = require('../config.json').channels.logs;
 
 module.exports.execute = async (client, message, args) => {
   try {
     let logMessage = new Discord.RichEmbed()
-      .setColor("#750384")
+      .setColor('#750384')
       .setTitle(`\`.summon\` command deleted`);
-    logMessage.addField("User:", message.author.tag);
-    logMessage.addField("Message:", message.content);
-    logMessage.addField("Channel:", message.channel);
+    logMessage.addField('User:', message.author.tag);
+    logMessage.addField('Message:', message.content);
+    logMessage.addField('Channel:', message.channel);
 
     message.delete();
 
@@ -18,7 +18,7 @@ module.exports.execute = async (client, message, args) => {
       console.log(err);
     }
   } catch (err) {
-    console.log("Delete error" + err);
+    console.log('Delete error' + err);
   }
 
   if (parseInt(args[0])) {
@@ -26,8 +26,8 @@ module.exports.execute = async (client, message, args) => {
       `_:candle: ${message.author} summons <@${args[0]}>. :candle:_`
     );
   } else {
-    var name = args.join(" ");
-    if (name == "") {
+    var name = args.join(' ');
+    if (name == '') {
       return await message.channel.send(
         `_:candle: ${message.author} summons a genie. :candle:_`
       );
@@ -38,9 +38,9 @@ module.exports.execute = async (client, message, args) => {
         member.displayName.toLowerCase().indexOf(name.toLowerCase()) != -1 ||
         member.user.username.toLowerCase().indexOf(name.toLowerCase()) != -1
       )
-        name = "<@" + member.id + ">";
+        name = '<@' + member.id + '>';
     });
-    if (name != "@everyone") {
+    if (name != '@everyone') {
       return await message.channel.send(
         `_:candle: ${message.author} summons ${name}. :candle:_`
       );
@@ -53,9 +53,9 @@ module.exports.execute = async (client, message, args) => {
 };
 
 module.exports.config = {
-  name: "summon",
-  aliases: ["call"],
-  module: "Fun",
-  description: "Summons specified user.",
-  usage: ["summon [user]"],
+  name: 'summon',
+  aliases: ['call'],
+  module: 'Fun',
+  description: 'Summons specified user.',
+  usage: ['summon [user]'],
 };

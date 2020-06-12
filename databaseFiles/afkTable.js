@@ -1,9 +1,9 @@
-const Sequelize = require("sequelize");
-const connect = require("./connect.js");
+const Sequelize = require('sequelize');
+const connect = require('./connect.js');
 
 const sequelize = connect.sequelize;
 
-module.exports = sequelize.define("Afk", {
+module.exports = sequelize.define('Afk', {
   message: {
     type: Sequelize.STRING,
     allowNull: true,

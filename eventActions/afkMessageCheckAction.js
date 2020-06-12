@@ -1,7 +1,7 @@
 // Get the afk Table stored in the SQLite database
-const Afks = require("../databaseFiles/afkTable.js");
-const Discord = require("discord.js");
-const config = require("../config.json");
+const Afks = require('../databaseFiles/afkTable.js');
+const Discord = require('discord.js');
+const config = require('../config.json');
 
 class afkMessageCheckAction {
   static async checkIfUserIsAFK(message) {
@@ -11,9 +11,9 @@ class afkMessageCheckAction {
     }
 
     if (
-      message.content.toLowerCase().indexOf("good") != -1 &&
-      message.content.toLowerCase().indexOf("morning") != -1 &&
-      message.content.toLowerCase().indexOf("bookery") != -1
+      message.content.toLowerCase().indexOf('good') != -1 &&
+      message.content.toLowerCase().indexOf('morning') != -1 &&
+      message.content.toLowerCase().indexOf('bookery') != -1
     ) {
       const sender = message.author;
       Afks.destroy({
@@ -37,10 +37,10 @@ class afkMessageCheckAction {
     const sender = message.author;
     const reactionFilter = (reaction, user) => {
       if (
-        (reaction.emoji.name === "✅" || reaction.emoji.name === "❌") &&
+        (reaction.emoji.name === '✅' || reaction.emoji.name === '❌') &&
         user.id == sender.id
       ) {
-        if (reaction.emoji.name === "✅") {
+        if (reaction.emoji.name === '✅') {
           Afks.destroy({
             where: {
               user: sender.id,
@@ -58,7 +58,7 @@ class afkMessageCheckAction {
               return;
             }
           });
-        } else if (reaction.emoji.name === "❌") {
+        } else if (reaction.emoji.name === '❌') {
           return;
         } else {
           return;
@@ -73,9 +73,9 @@ class afkMessageCheckAction {
             : message.author.username
         }`
       )
-      .addField("Are you back?", "Then react with ✅")
-      .setFooter("This message will delete itself after 15 seconds")
-      .setColor("#750384");
+      .addField('Are you back?', 'Then react with ✅')
+      .setFooter('This message will delete itself after 15 seconds')
+      .setColor('#750384');
     const user = message.author;
 
     // call function with variables timestamp1 and timestamp2 in call
@@ -102,24 +102,24 @@ class afkMessageCheckAction {
           timedifference(result[0].cooldown, Date.now()) >= 3
         ) {
           message.author.send(noLongerAFKMessage).then((msg) => {
-            msg.react("✅");
+            msg.react('✅');
             Afks.update(
               { cooldown: Date.now() },
               { where: { user: user.id } }
             ).catch((error) => {
-              "Update error: " + error;
+              'Update error: ' + error;
             });
 
             // Use reaction filter to remove to remove the user from the database rather than an event
             let collector = msg.createReactionCollector(reactionFilter, {
               time: 15000,
             });
-            collector.on("end", () => {
+            collector.on('end', () => {
               msg
                 .delete()
                 .catch(() =>
                   console.log(
-                    "Tried deleting afk message that was already deleted"
+                    'Tried deleting afk message that was already deleted'
                   )
                 );
             });
@@ -136,35 +136,35 @@ class afkMessageCheckAction {
       var interval = Math.floor(seconds / 31536000);
 
       if (interval == 1) {
-        return interval + " year";
+        return interval + ' year';
       } else if (interval >= 1) {
-        return interval + " years";
+        return interval + ' years';
       }
       interval = Math.floor(seconds / 2592000);
       if (interval == 1) {
-        return interval + " month";
+        return interval + ' month';
       } else if (interval >= 1) {
-        return interval + " months";
+        return interval + ' months';
       }
       interval = Math.floor(seconds / 86400);
       if (interval == 1) {
-        return interval + " day";
+        return interval + ' day';
       } else if (interval >= 1) {
-        return interval + " days";
+        return interval + ' days';
       }
       interval = Math.floor(seconds / 3600);
       if (interval == 1) {
-        return interval + " hour";
+        return interval + ' hour';
       } else if (interval >= 1) {
-        return interval + " hours";
+        return interval + ' hours';
       }
       interval = Math.floor(seconds / 60);
       if (interval == 1) {
-        return interval + " minute";
+        return interval + ' minute';
       } else if (interval >= 1) {
-        return interval + " minutes";
+        return interval + ' minutes';
       }
-      return Math.floor(seconds) + " seconds";
+      return Math.floor(seconds) + ' seconds';
     }
 
     // Make sure the message is meant for the one person only. This also means the bot will not trigger on tag spams.
@@ -181,9 +181,9 @@ class afkMessageCheckAction {
               let name = user.nickname ? user.nickname : user.user.username;
               const embed = new Discord.RichEmbed()
                 .setTitle(`${name} is not here`)
-                .addField("AFK Message:", result[0].message)
-                .addField("Went AFK:", timeSince(result[0].date) + " ago")
-                .setColor("#750384");
+                .addField('AFK Message:', result[0].message)
+                .addField('Went AFK:', timeSince(result[0].date) + ' ago')
+                .setColor('#750384');
               message.channel.send(embed);
             });
           }

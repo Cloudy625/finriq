@@ -1,5 +1,5 @@
 // Import the discord.js module
-const Discord = require("discord.js");
+const Discord = require('discord.js');
 
 // Create an instance of a Discord client
 const client = new Discord.Client();
@@ -20,1093 +20,1093 @@ var game;
 var wordathon = {};
 
 var words = [
-  "you",
-  "I",
-  "to",
-  "the",
-  "and",
-  "that",
-  "of",
-  "me",
-  "in",
-  "this",
-  "for",
-  "no",
-  "have",
-  "my",
-  "just",
-  "not",
-  "do",
-  "be",
-  "on",
-  "your",
-  "was",
-  "we",
-  "with",
-  "but",
-  "all",
-  "well",
-  "he",
-  "about",
-  "right",
-  "get",
-  "here",
-  "out",
-  "if",
-  "her",
-  "she",
-  "can",
-  "up",
-  "want",
-  "now",
-  "go",
-  "him",
-  "there",
-  "one",
-  "why",
-  "see",
-  "come",
-  "good",
-  "they",
-  "really",
-  "when",
-  "back",
-  "from",
-  "were",
-  "yes",
-  "his",
-  "or",
-  "who",
-  "because",
-  "some",
-  "then",
-  "say",
-  "an",
-  "way",
-  "us",
-  "little",
-  "never",
-  "too",
-  "sure",
-  "more",
-  "over",
-  "our",
-  "sorry",
-  "where",
-  "let",
-  "maybe",
-  "down",
-  "man",
-  "very",
-  "by",
-  "anything",
-  "much",
-  "any",
-  "life",
-  "even",
-  "off",
-  "please",
-  "thank",
-  "only",
-  "help",
-  "two",
-  "talk",
-  "people",
-  "God",
-  "still",
-  "wait",
-  "into",
-  "find",
-  "again",
-  "thing",
-  "call",
-  "told",
-  "great",
-  "before",
-  "better",
-  "ever",
-  "night",
-  "than",
-  "away",
-  "first",
-  "believe",
-  "fine",
-  "home",
-  "after",
-  "last",
-  "these",
-  "put",
-  "around",
-  "stop",
-  "long",
-  "always",
-  "listen",
-  "those",
-  "big",
-  "lot",
-  "kind",
-  "wrong",
-  "through",
-  "new",
-  "guess",
-  "care",
-  "bad",
-  "mom",
-  "remember",
-  "together",
-  "dad",
-  "leave",
-  "mother",
-  "place",
-  "understand",
-  "actually",
-  "hear",
-  "baby",
-  "nice",
-  "father",
-  "else",
-  "stay",
-  "their",
-  "course",
-  "might",
-  "mind",
-  "every",
-  "enough",
-  "try",
-  "hell",
-  "came",
-  "someone",
-  "own",
-  "family",
-  "whole",
-  "another",
-  "house",
-  "yourself",
-  "idea",
-  "ask",
-  "best",
-  "must",
-  "old",
-  "woman",
-  "hello",
-  "which",
-  "room",
-  "money",
-  "left",
-  "tonight",
-  "real",
-  "son",
-  "hope",
-  "name",
-  "same",
-  "happy",
-  "pretty",
-  "girl",
-  "sir",
-  "show",
-  "already",
-  "may",
-  "next",
-  "three",
-  "found",
-  "world",
-  "honey",
-  "myself",
-  "exactly",
-  "probably",
-  "hurt",
-  "both",
-  "while",
-  "dead",
-  "alone",
-  "since",
-  "excuse",
-  "start",
-  "kill",
-  "hard",
-  "today",
-  "car",
-  "ready",
-  "until",
-  "without",
-  "whatever",
-  "deal",
-  "took",
-  "once",
-  "friend",
-  "head",
-  "stuff",
-  "most",
-  "worry",
-  "second",
-  "part",
-  "truth",
-  "school",
-  "face",
-  "forget",
-  "business",
-  "each",
-  "cause",
-  "soon",
-  "wife",
-  "use",
-  "chance",
-  "run",
-  "move",
-  "anyone",
-  "person",
-  "bye",
-  "somebody",
-  "heart",
-  "such",
-  "point",
-  "later",
-  "meet",
-  "anyway",
-  "phone",
-  "reason",
-  "lost",
-  "look",
-  "bring",
-  "case",
-  "wish",
-  "tomorrow",
-  "trust",
-  "check",
-  "end",
-  "late",
-  "anymore",
-  "five",
-  "least",
-  "town",
-  "year",
-  "make",
-  "mean",
-  "play",
-  "hate",
-  "ago",
-  "beautiful",
-  "fact",
-  "crazy",
-  "party",
-  "sit",
-  "open",
-  "afraid",
-  "between",
-  "important",
-  "rest",
-  "fun",
-  "kid",
-  "glad",
-  "everyone",
-  "day",
-  "sister",
-  "minute",
-  "everybody",
-  "bit",
-  "couple",
-  "either",
-  "daughter",
-  "under",
-  "break",
-  "door",
-  "set",
-  "close",
-  "easy",
-  "doctor",
-  "far",
-  "walk",
-  "need",
-  "trouble",
-  "mine",
-  "though",
-  "time",
-  "different",
-  "hospital",
-  "anybody",
-  "alright",
-  "wedding",
-  "shut",
-  "able",
-  "die",
-  "perfect",
-  "police",
-  "stand",
-  "hit",
-  "story",
-  "dinner",
-  "against",
-  "funny",
-  "husband",
-  "almost",
-  "stupid",
-  "pay",
-  "answer",
-  "four",
-  "office",
-  "cool",
-  "news",
-  "child",
-  "half",
-  "yours",
-  "moment",
-  "sleep",
-  "young",
-  "men",
-  "sonny",
-  "lucky",
-  "pick",
-  "sometimes",
-  "them",
-  "bed",
-  "also",
-  "date",
-  "line",
-  "lose",
-  "fire",
-  "free",
-  "hand",
-  "serious",
-  "shit",
-  "behind",
-  "inside",
-  "high",
-  "ahead",
-  "wonderful",
-  "fight",
-  "past",
-  "cut",
-  "quite",
-  "number",
-  "sick",
-  "game",
-  "eat",
-  "nobody",
-  "death",
-  "along",
-  "finally",
-  "upset",
-  "seem",
-  "safe",
-  "children",
-  "front",
-  "shot",
-  "love",
-  "clear",
-  "hot",
-  "six",
-  "drink",
-  "absolutely",
-  "how",
-  "sweet",
-  "alive",
-  "sense",
-  "happen",
-  "special",
-  "bet",
-  "blood",
-  "lie",
-  "full",
-  "meeting",
-  "dear",
-  "coffee",
-  "sound",
-  "fault",
-  "water",
-  "ten",
-  "women",
-  "welcome",
-  "buy",
-  "hour",
-  "speak",
-  "think",
-  "Christmas",
-  "body",
-  "order",
-  "outside",
-  "hang",
-  "worse",
-  "company",
-  "mistake",
-  "handle",
-  "spend",
-  "totally",
-  "control",
-  "marriage",
-  "power",
-  "president",
-  "unless",
-  "send",
-  "picture",
-  "hundred",
-  "change",
-  "explain",
-  "certainly",
-  "sign",
-  "boy",
-  "relationship",
-  "hair",
-  "choice",
-  "anywhere",
-  "secret",
-  "future",
-  "weird",
-  "luck",
-  "touch",
-  "crane",
-  "question",
-  "obviously",
-  "pain",
-  "straight",
-  "grace",
-  "white",
-  "fast",
-  "word",
-  "food",
-  "none",
-  "drive",
-  "work",
-  "marry",
-  "light",
-  "test",
-  "drop",
-  "frank",
-  "sent",
-  "city",
-  "dream",
-  "protect",
-  "twenty",
-  "class",
-  "surprise",
-  "forever",
-  "poor",
-  "mad",
-  "except",
-  "gun",
-  "know",
-  "dance",
-  "take",
-  "especially",
-  "situation",
-  "besides",
-  "week",
-  "himself",
-  "act",
-  "worth",
-  "top",
-  "expect",
-  "rather",
-  "involve",
-  "swear",
-  "piece",
-  "busy",
-  "law",
-  "black",
-  "movie",
-  "catch",
-  "country",
-  "less",
-  "perhaps",
-  "step",
-  "fall",
-  "dog",
-  "win",
-  "personal",
-  "admit",
-  "problem",
-  "murder",
-  "strong",
-  "evil",
-  "feel",
-  "honest",
-  "eye",
-  "broke",
-  "miss",
-  "tired",
-  "evening",
-  "human",
-  "red",
-  "entire",
-  "trip",
-  "club",
-  "suppose",
-  "calm",
-  "imagine",
-  "fair",
-  "blame",
-  "street",
-  "apartment",
-  "court",
-  "terrible",
-  "clean",
-  "learn",
-  "relax",
-  "million",
-  "charity",
-  "accident",
-  "prove",
-  "smart",
-  "message",
-  "small",
-  "interest",
-  "table",
-  "become",
-  "mouth",
-  "pregnant",
-  "middle",
-  "ring",
-  "careful",
-  "shall",
-  "team",
-  "ride",
-  "figure",
-  "wear",
-  "shoot",
-  "stick",
-  "ray",
-  "follow",
-  "angry",
-  "instead",
-  "buddy",
-  "write",
-  "early",
-  "angel",
-  "nick",
-  "ran",
-  "war",
-  "forgive",
-  "jail",
-  "lunch",
-  "eight",
-  "thousand",
-  "music",
-  "tough",
-  "tape",
-  "count",
-  "college",
-  "boyfriend",
-  "proud",
-  "agree",
-  "birthday",
-  "bill",
-  "seven",
-  "history",
-  "share",
-  "offer",
-  "hurry",
-  "feet",
-  "wonder",
-  "simple",
-  "decision",
-  "building",
-  "finish",
-  "voice",
-  "herself",
-  "would",
-  "list",
-  "mess",
-  "deserve",
-  "cute",
-  "dress",
-  "interesting",
-  "Jesus",
-  "hotel",
-  "enjoy",
-  "quiet",
-  "road",
-  "eve",
-  "short",
-  "beat",
-  "mention",
-  "clothe",
-  "neither",
-  "fix",
-  "respect",
-  "spent",
-  "prison",
-  "attention",
-  "near",
-  "bar",
-  "pass",
-  "gift",
-  "dark",
-  "self",
-  "normal",
-  "aunt",
-  "dollar",
-  "lawyer",
-  "apart",
-  "certain",
-  "plan",
-  "girlfriend",
-  "floor",
-  "whether",
-  "everything",
-  "present",
-  "earth",
-  "private",
-  "box",
-  "cover",
-  "judge",
-  "sake",
-  "mommy",
-  "possibly",
-  "worst",
-  "station",
-  "accept",
-  "blow",
-  "strange",
-  "save",
-  "plane",
-  "yesterday",
-  "quick",
-  "lately",
-  "stuck",
-  "lovely",
-  "security",
-  "report",
-  "difference",
-  "store",
-  "bag",
-  "ball",
-  "single",
-  "doubt",
-  "blue",
-  "deep",
-  "park",
-  "record",
-  "lord",
-  "join",
-  "key",
-  "captain",
-  "card",
-  "crime",
-  "window",
-  "return",
-  "guilty",
-  "difficult",
-  "soul",
-  "joke",
-  "service",
-  "magic",
-  "uncle",
-  "promise",
-  "public",
-  "bother",
-  "island",
-  "seriously",
-  "cell",
-  "lead",
-  "broken",
-  "advice",
-  "somehow",
-  "push",
-  "concern",
-  "usually",
-  "boss",
-  "rule",
-  "summer",
-  "thirty",
-  "risk",
-  "letting",
-  "officer",
-  "support",
-  "afternoon",
-  "born",
-  "apologise",
-  "seat",
-  "nervous",
-  "across",
-  "song",
-  "charge",
-  "patient",
-  "boat",
-  "brain",
-  "hide",
-  "general",
-  "nine",
-  "huge",
-  "breakfast",
-  "horrible",
-  "age",
-  "awful",
-  "pleasure",
-  "driving",
-  "system",
-  "sell",
-  "quit",
-  "dying",
-  "chief",
-  "faith",
-  "gay",
-  "month",
-  "visit",
-  "screw",
-  "letter",
-  "decide",
-  "double",
-  "sad",
-  "press",
-  "forward",
-  "fool",
-  "smell",
-  "spell",
-  "memory",
-  "mark",
-  "slow",
-  "hungry",
-  "board",
-  "position",
-  "hearing",
-  "rose",
-  "kitchen",
-  "force",
-  "fly",
-  "during",
-  "space",
-  "kick",
-  "other",
-  "grab",
-  "discuss",
-  "third",
-  "cat",
-  "fifty",
-  "mile",
-  "fat",
-  "reading",
-  "idiot",
-  "rock",
-  "suddenly",
-  "agent",
-  "bunch",
-  "destroy",
-  "track",
-  "shoes",
-  "scene",
-  "peace",
-  "demon",
-  "low",
-  "consider",
-  "drunk",
-  "tell",
-  "knock",
-  "bell",
-  "cash",
-  "give",
-  "department",
-  "nose",
-  "turn",
-  "keep",
-  "beer",
-  "sooner",
-  "plenty",
-  "extra",
-  "attack",
-  "ground",
-  "whose",
-  "weekend",
-  "matter",
-  "wrote",
-  "type",
-  "opportunity",
-  "king",
-  "impossible",
-  "book",
-  "machine",
-  "waste",
-  "pretend",
-  "danger",
-  "wall",
-  "jump",
-  "proof",
-  "complete",
-  "arrest",
-  "perfectly",
-  "warm",
-  "pull",
-  "twice",
-  "easier",
-  "suit",
-  "romantic",
-  "drug",
-  "comfortable",
-  "fit",
-  "divorce",
-  "begin",
-  "closely",
-  "ruin",
-  "although",
-  "smile",
-  "laugh",
-  "fish",
-  "treat",
-  "fear",
-  "amber",
-  "guy",
-  "otherwise",
-  "excited",
-  "mail",
-  "green",
-  "stole",
-  "notice",
-  "excellent",
-  "pop",
-  "paper",
-  "bottom",
-  "note",
-  "sudden",
-  "church",
-  "bathroom",
-  "sing",
-  "glass",
-  "tree",
-  "contact",
-  "shop",
-  "reach",
-  "cry",
-  "cake",
-  "partner",
-  "bus",
-  "computer",
-  "study",
-  "star",
-  "area",
-  "wind",
-  "chicken",
-  "dry",
-  "hero",
-  "error",
-  "are",
-  "build",
-  "sea",
-  "Saturday",
-  "add",
-  "birth",
-  "bird",
-  "grandmother",
-  "heavy",
-  "west",
-  "lesson",
-  "heat",
-  "speed",
-  "milk",
-  "rain",
-  "sugar",
-  "market",
-  "process",
-  "stone",
-  "serve",
-  "river",
-  "super",
-  "monkey",
-  "pig",
-  "chat",
-  "signal",
-  "cup",
-  "bee",
-  "a",
-  "above",
-  "addition",
-  "among",
-  "amount",
-  "angle",
-  "animal",
-  "appear",
-  "apple",
-  "art",
-  "as",
-  "at",
-  "bank",
-  "base",
-  "bear",
-  "belong",
-  "block",
-  "bone",
-  "brown",
-  "cannot",
-  "capital",
-  "carry",
-  "centre",
-  "century",
-  "circle",
-  "cloud",
-  "cost",
-  "cold",
-  "column",
-  "common",
-  "compere",
-  "condition",
-  "contain",
-  "continue",
-  "cook",
-  "copy",
-  "cow",
-  "create",
-  "cross",
-  "crowd",
-  "describe",
-  "desert",
-  "design",
-  "detail",
-  "dictionary",
-  "direction",
-  "ear",
-  "east",
-  "like",
-  "edge",
-  "effect",
-  "egg",
-  "element",
-  "energy",
-  "engine",
-  "England",
-  "English",
-  "example",
-  "express",
-  "famous",
-  "farm",
-  "field",
-  "finger",
-  "flat",
-  "flower",
-  "foot",
-  "forest",
-  "form",
-  "fresh",
-  "fruit",
-  "garden",
-  "gas",
-  "gold",
-  "group",
-  "grow",
-  "hat",
-  "hole",
-  "horse",
-  "hunt",
-  "ice",
-  "inch",
-  "include",
-  "increase",
-  "indicate",
-  "information",
-  "insect",
-  "instrument",
-  "iron",
-  "is",
-  "itself",
-  "job",
-  "lady",
-  "lake",
-  "land",
-  "language",
-  "large",
-  "lay",
-  "leg",
-  "length",
-  "level",
-  "lift",
-  "main",
-  "many",
-  "map",
-  "march",
-  "bacon",
-  "gap",
-  "pan",
+  'you',
+  'I',
+  'to',
+  'the',
+  'and',
+  'that',
+  'of',
+  'me',
+  'in',
+  'this',
+  'for',
+  'no',
+  'have',
+  'my',
+  'just',
+  'not',
+  'do',
+  'be',
+  'on',
+  'your',
+  'was',
+  'we',
+  'with',
+  'but',
+  'all',
+  'well',
+  'he',
+  'about',
+  'right',
+  'get',
+  'here',
+  'out',
+  'if',
+  'her',
+  'she',
+  'can',
+  'up',
+  'want',
+  'now',
+  'go',
+  'him',
+  'there',
+  'one',
+  'why',
+  'see',
+  'come',
+  'good',
+  'they',
+  'really',
+  'when',
+  'back',
+  'from',
+  'were',
+  'yes',
+  'his',
+  'or',
+  'who',
+  'because',
+  'some',
+  'then',
+  'say',
+  'an',
+  'way',
+  'us',
+  'little',
+  'never',
+  'too',
+  'sure',
+  'more',
+  'over',
+  'our',
+  'sorry',
+  'where',
+  'let',
+  'maybe',
+  'down',
+  'man',
+  'very',
+  'by',
+  'anything',
+  'much',
+  'any',
+  'life',
+  'even',
+  'off',
+  'please',
+  'thank',
+  'only',
+  'help',
+  'two',
+  'talk',
+  'people',
+  'God',
+  'still',
+  'wait',
+  'into',
+  'find',
+  'again',
+  'thing',
+  'call',
+  'told',
+  'great',
+  'before',
+  'better',
+  'ever',
+  'night',
+  'than',
+  'away',
+  'first',
+  'believe',
+  'fine',
+  'home',
+  'after',
+  'last',
+  'these',
+  'put',
+  'around',
+  'stop',
+  'long',
+  'always',
+  'listen',
+  'those',
+  'big',
+  'lot',
+  'kind',
+  'wrong',
+  'through',
+  'new',
+  'guess',
+  'care',
+  'bad',
+  'mom',
+  'remember',
+  'together',
+  'dad',
+  'leave',
+  'mother',
+  'place',
+  'understand',
+  'actually',
+  'hear',
+  'baby',
+  'nice',
+  'father',
+  'else',
+  'stay',
+  'their',
+  'course',
+  'might',
+  'mind',
+  'every',
+  'enough',
+  'try',
+  'hell',
+  'came',
+  'someone',
+  'own',
+  'family',
+  'whole',
+  'another',
+  'house',
+  'yourself',
+  'idea',
+  'ask',
+  'best',
+  'must',
+  'old',
+  'woman',
+  'hello',
+  'which',
+  'room',
+  'money',
+  'left',
+  'tonight',
+  'real',
+  'son',
+  'hope',
+  'name',
+  'same',
+  'happy',
+  'pretty',
+  'girl',
+  'sir',
+  'show',
+  'already',
+  'may',
+  'next',
+  'three',
+  'found',
+  'world',
+  'honey',
+  'myself',
+  'exactly',
+  'probably',
+  'hurt',
+  'both',
+  'while',
+  'dead',
+  'alone',
+  'since',
+  'excuse',
+  'start',
+  'kill',
+  'hard',
+  'today',
+  'car',
+  'ready',
+  'until',
+  'without',
+  'whatever',
+  'deal',
+  'took',
+  'once',
+  'friend',
+  'head',
+  'stuff',
+  'most',
+  'worry',
+  'second',
+  'part',
+  'truth',
+  'school',
+  'face',
+  'forget',
+  'business',
+  'each',
+  'cause',
+  'soon',
+  'wife',
+  'use',
+  'chance',
+  'run',
+  'move',
+  'anyone',
+  'person',
+  'bye',
+  'somebody',
+  'heart',
+  'such',
+  'point',
+  'later',
+  'meet',
+  'anyway',
+  'phone',
+  'reason',
+  'lost',
+  'look',
+  'bring',
+  'case',
+  'wish',
+  'tomorrow',
+  'trust',
+  'check',
+  'end',
+  'late',
+  'anymore',
+  'five',
+  'least',
+  'town',
+  'year',
+  'make',
+  'mean',
+  'play',
+  'hate',
+  'ago',
+  'beautiful',
+  'fact',
+  'crazy',
+  'party',
+  'sit',
+  'open',
+  'afraid',
+  'between',
+  'important',
+  'rest',
+  'fun',
+  'kid',
+  'glad',
+  'everyone',
+  'day',
+  'sister',
+  'minute',
+  'everybody',
+  'bit',
+  'couple',
+  'either',
+  'daughter',
+  'under',
+  'break',
+  'door',
+  'set',
+  'close',
+  'easy',
+  'doctor',
+  'far',
+  'walk',
+  'need',
+  'trouble',
+  'mine',
+  'though',
+  'time',
+  'different',
+  'hospital',
+  'anybody',
+  'alright',
+  'wedding',
+  'shut',
+  'able',
+  'die',
+  'perfect',
+  'police',
+  'stand',
+  'hit',
+  'story',
+  'dinner',
+  'against',
+  'funny',
+  'husband',
+  'almost',
+  'stupid',
+  'pay',
+  'answer',
+  'four',
+  'office',
+  'cool',
+  'news',
+  'child',
+  'half',
+  'yours',
+  'moment',
+  'sleep',
+  'young',
+  'men',
+  'sonny',
+  'lucky',
+  'pick',
+  'sometimes',
+  'them',
+  'bed',
+  'also',
+  'date',
+  'line',
+  'lose',
+  'fire',
+  'free',
+  'hand',
+  'serious',
+  'shit',
+  'behind',
+  'inside',
+  'high',
+  'ahead',
+  'wonderful',
+  'fight',
+  'past',
+  'cut',
+  'quite',
+  'number',
+  'sick',
+  'game',
+  'eat',
+  'nobody',
+  'death',
+  'along',
+  'finally',
+  'upset',
+  'seem',
+  'safe',
+  'children',
+  'front',
+  'shot',
+  'love',
+  'clear',
+  'hot',
+  'six',
+  'drink',
+  'absolutely',
+  'how',
+  'sweet',
+  'alive',
+  'sense',
+  'happen',
+  'special',
+  'bet',
+  'blood',
+  'lie',
+  'full',
+  'meeting',
+  'dear',
+  'coffee',
+  'sound',
+  'fault',
+  'water',
+  'ten',
+  'women',
+  'welcome',
+  'buy',
+  'hour',
+  'speak',
+  'think',
+  'Christmas',
+  'body',
+  'order',
+  'outside',
+  'hang',
+  'worse',
+  'company',
+  'mistake',
+  'handle',
+  'spend',
+  'totally',
+  'control',
+  'marriage',
+  'power',
+  'president',
+  'unless',
+  'send',
+  'picture',
+  'hundred',
+  'change',
+  'explain',
+  'certainly',
+  'sign',
+  'boy',
+  'relationship',
+  'hair',
+  'choice',
+  'anywhere',
+  'secret',
+  'future',
+  'weird',
+  'luck',
+  'touch',
+  'crane',
+  'question',
+  'obviously',
+  'pain',
+  'straight',
+  'grace',
+  'white',
+  'fast',
+  'word',
+  'food',
+  'none',
+  'drive',
+  'work',
+  'marry',
+  'light',
+  'test',
+  'drop',
+  'frank',
+  'sent',
+  'city',
+  'dream',
+  'protect',
+  'twenty',
+  'class',
+  'surprise',
+  'forever',
+  'poor',
+  'mad',
+  'except',
+  'gun',
+  'know',
+  'dance',
+  'take',
+  'especially',
+  'situation',
+  'besides',
+  'week',
+  'himself',
+  'act',
+  'worth',
+  'top',
+  'expect',
+  'rather',
+  'involve',
+  'swear',
+  'piece',
+  'busy',
+  'law',
+  'black',
+  'movie',
+  'catch',
+  'country',
+  'less',
+  'perhaps',
+  'step',
+  'fall',
+  'dog',
+  'win',
+  'personal',
+  'admit',
+  'problem',
+  'murder',
+  'strong',
+  'evil',
+  'feel',
+  'honest',
+  'eye',
+  'broke',
+  'miss',
+  'tired',
+  'evening',
+  'human',
+  'red',
+  'entire',
+  'trip',
+  'club',
+  'suppose',
+  'calm',
+  'imagine',
+  'fair',
+  'blame',
+  'street',
+  'apartment',
+  'court',
+  'terrible',
+  'clean',
+  'learn',
+  'relax',
+  'million',
+  'charity',
+  'accident',
+  'prove',
+  'smart',
+  'message',
+  'small',
+  'interest',
+  'table',
+  'become',
+  'mouth',
+  'pregnant',
+  'middle',
+  'ring',
+  'careful',
+  'shall',
+  'team',
+  'ride',
+  'figure',
+  'wear',
+  'shoot',
+  'stick',
+  'ray',
+  'follow',
+  'angry',
+  'instead',
+  'buddy',
+  'write',
+  'early',
+  'angel',
+  'nick',
+  'ran',
+  'war',
+  'forgive',
+  'jail',
+  'lunch',
+  'eight',
+  'thousand',
+  'music',
+  'tough',
+  'tape',
+  'count',
+  'college',
+  'boyfriend',
+  'proud',
+  'agree',
+  'birthday',
+  'bill',
+  'seven',
+  'history',
+  'share',
+  'offer',
+  'hurry',
+  'feet',
+  'wonder',
+  'simple',
+  'decision',
+  'building',
+  'finish',
+  'voice',
+  'herself',
+  'would',
+  'list',
+  'mess',
+  'deserve',
+  'cute',
+  'dress',
+  'interesting',
+  'Jesus',
+  'hotel',
+  'enjoy',
+  'quiet',
+  'road',
+  'eve',
+  'short',
+  'beat',
+  'mention',
+  'clothe',
+  'neither',
+  'fix',
+  'respect',
+  'spent',
+  'prison',
+  'attention',
+  'near',
+  'bar',
+  'pass',
+  'gift',
+  'dark',
+  'self',
+  'normal',
+  'aunt',
+  'dollar',
+  'lawyer',
+  'apart',
+  'certain',
+  'plan',
+  'girlfriend',
+  'floor',
+  'whether',
+  'everything',
+  'present',
+  'earth',
+  'private',
+  'box',
+  'cover',
+  'judge',
+  'sake',
+  'mommy',
+  'possibly',
+  'worst',
+  'station',
+  'accept',
+  'blow',
+  'strange',
+  'save',
+  'plane',
+  'yesterday',
+  'quick',
+  'lately',
+  'stuck',
+  'lovely',
+  'security',
+  'report',
+  'difference',
+  'store',
+  'bag',
+  'ball',
+  'single',
+  'doubt',
+  'blue',
+  'deep',
+  'park',
+  'record',
+  'lord',
+  'join',
+  'key',
+  'captain',
+  'card',
+  'crime',
+  'window',
+  'return',
+  'guilty',
+  'difficult',
+  'soul',
+  'joke',
+  'service',
+  'magic',
+  'uncle',
+  'promise',
+  'public',
+  'bother',
+  'island',
+  'seriously',
+  'cell',
+  'lead',
+  'broken',
+  'advice',
+  'somehow',
+  'push',
+  'concern',
+  'usually',
+  'boss',
+  'rule',
+  'summer',
+  'thirty',
+  'risk',
+  'letting',
+  'officer',
+  'support',
+  'afternoon',
+  'born',
+  'apologise',
+  'seat',
+  'nervous',
+  'across',
+  'song',
+  'charge',
+  'patient',
+  'boat',
+  'brain',
+  'hide',
+  'general',
+  'nine',
+  'huge',
+  'breakfast',
+  'horrible',
+  'age',
+  'awful',
+  'pleasure',
+  'driving',
+  'system',
+  'sell',
+  'quit',
+  'dying',
+  'chief',
+  'faith',
+  'gay',
+  'month',
+  'visit',
+  'screw',
+  'letter',
+  'decide',
+  'double',
+  'sad',
+  'press',
+  'forward',
+  'fool',
+  'smell',
+  'spell',
+  'memory',
+  'mark',
+  'slow',
+  'hungry',
+  'board',
+  'position',
+  'hearing',
+  'rose',
+  'kitchen',
+  'force',
+  'fly',
+  'during',
+  'space',
+  'kick',
+  'other',
+  'grab',
+  'discuss',
+  'third',
+  'cat',
+  'fifty',
+  'mile',
+  'fat',
+  'reading',
+  'idiot',
+  'rock',
+  'suddenly',
+  'agent',
+  'bunch',
+  'destroy',
+  'track',
+  'shoes',
+  'scene',
+  'peace',
+  'demon',
+  'low',
+  'consider',
+  'drunk',
+  'tell',
+  'knock',
+  'bell',
+  'cash',
+  'give',
+  'department',
+  'nose',
+  'turn',
+  'keep',
+  'beer',
+  'sooner',
+  'plenty',
+  'extra',
+  'attack',
+  'ground',
+  'whose',
+  'weekend',
+  'matter',
+  'wrote',
+  'type',
+  'opportunity',
+  'king',
+  'impossible',
+  'book',
+  'machine',
+  'waste',
+  'pretend',
+  'danger',
+  'wall',
+  'jump',
+  'proof',
+  'complete',
+  'arrest',
+  'perfectly',
+  'warm',
+  'pull',
+  'twice',
+  'easier',
+  'suit',
+  'romantic',
+  'drug',
+  'comfortable',
+  'fit',
+  'divorce',
+  'begin',
+  'closely',
+  'ruin',
+  'although',
+  'smile',
+  'laugh',
+  'fish',
+  'treat',
+  'fear',
+  'amber',
+  'guy',
+  'otherwise',
+  'excited',
+  'mail',
+  'green',
+  'stole',
+  'notice',
+  'excellent',
+  'pop',
+  'paper',
+  'bottom',
+  'note',
+  'sudden',
+  'church',
+  'bathroom',
+  'sing',
+  'glass',
+  'tree',
+  'contact',
+  'shop',
+  'reach',
+  'cry',
+  'cake',
+  'partner',
+  'bus',
+  'computer',
+  'study',
+  'star',
+  'area',
+  'wind',
+  'chicken',
+  'dry',
+  'hero',
+  'error',
+  'are',
+  'build',
+  'sea',
+  'Saturday',
+  'add',
+  'birth',
+  'bird',
+  'grandmother',
+  'heavy',
+  'west',
+  'lesson',
+  'heat',
+  'speed',
+  'milk',
+  'rain',
+  'sugar',
+  'market',
+  'process',
+  'stone',
+  'serve',
+  'river',
+  'super',
+  'monkey',
+  'pig',
+  'chat',
+  'signal',
+  'cup',
+  'bee',
+  'a',
+  'above',
+  'addition',
+  'among',
+  'amount',
+  'angle',
+  'animal',
+  'appear',
+  'apple',
+  'art',
+  'as',
+  'at',
+  'bank',
+  'base',
+  'bear',
+  'belong',
+  'block',
+  'bone',
+  'brown',
+  'cannot',
+  'capital',
+  'carry',
+  'centre',
+  'century',
+  'circle',
+  'cloud',
+  'cost',
+  'cold',
+  'column',
+  'common',
+  'compere',
+  'condition',
+  'contain',
+  'continue',
+  'cook',
+  'copy',
+  'cow',
+  'create',
+  'cross',
+  'crowd',
+  'describe',
+  'desert',
+  'design',
+  'detail',
+  'dictionary',
+  'direction',
+  'ear',
+  'east',
+  'like',
+  'edge',
+  'effect',
+  'egg',
+  'element',
+  'energy',
+  'engine',
+  'England',
+  'English',
+  'example',
+  'express',
+  'famous',
+  'farm',
+  'field',
+  'finger',
+  'flat',
+  'flower',
+  'foot',
+  'forest',
+  'form',
+  'fresh',
+  'fruit',
+  'garden',
+  'gas',
+  'gold',
+  'group',
+  'grow',
+  'hat',
+  'hole',
+  'horse',
+  'hunt',
+  'ice',
+  'inch',
+  'include',
+  'increase',
+  'indicate',
+  'information',
+  'insect',
+  'instrument',
+  'iron',
+  'is',
+  'itself',
+  'job',
+  'lady',
+  'lake',
+  'land',
+  'language',
+  'large',
+  'lay',
+  'leg',
+  'length',
+  'level',
+  'lift',
+  'main',
+  'many',
+  'map',
+  'march',
+  'bacon',
+  'gap',
+  'pan',
 ];
 
 var books = [
   {
-    title: "The Man Who Loved Children",
-    author: "Christina Stead",
+    title: 'The Man Who Loved Children',
+    author: 'Christina Stead',
     summary:
-      "Every family lives in an evolving story, told by all its members, inside a landscape of portentous events and characters. Their view of themselves is not shared by people looking from outside in--visitors, and particularly not relatives--for they have to see something pretty humdrum, even if, as in this case, the fecklessness they complain of is extreme.",
+      'Every family lives in an evolving story, told by all its members, inside a landscape of portentous events and characters. Their view of themselves is not shared by people looking from outside in--visitors, and particularly not relatives--for they have to see something pretty humdrum, even if, as in this case, the fecklessness they complain of is extreme.',
   },
   {
-    title: "American Youth",
-    author: "Phil LaMarche",
+    title: 'American Youth',
+    author: 'Phil LaMarche',
     summary:
-      "A controlled, essential, and powerful tale of a teenager in southern New England who is confronted by a terrible moral dilemma following a firearms accident in his home. This tragedy earns him the admiration of a sinister gang of boys at his school and a girl associated with them.",
+      'A controlled, essential, and powerful tale of a teenager in southern New England who is confronted by a terrible moral dilemma following a firearms accident in his home. This tragedy earns him the admiration of a sinister gang of boys at his school and a girl associated with them.',
   },
   {
-    title: "My Abandonment",
-    author: "Peter Rock",
+    title: 'My Abandonment',
+    author: 'Peter Rock',
     summary:
-      "A thirteen-year-old girl and her father live in Forest Park, the enormous nature preserve in Portland, Oregon. There they inhabit an elaborate cave shelter, bathe in a nearby creek, store perishables at the water’s edge, use a makeshift septic system, tend a garden, even keep a library of sorts. Once a week, they go to the city to buy groceries and otherwise merge with the civilized world. But one small mistake allows a backcountry jogger to discover them, which derails their entire existence, ultimately provoking a deeper flight.",
+      'A thirteen-year-old girl and her father live in Forest Park, the enormous nature preserve in Portland, Oregon. There they inhabit an elaborate cave shelter, bathe in a nearby creek, store perishables at the water’s edge, use a makeshift septic system, tend a garden, even keep a library of sorts. Once a week, they go to the city to buy groceries and otherwise merge with the civilized world. But one small mistake allows a backcountry jogger to discover them, which derails their entire existence, ultimately provoking a deeper flight.',
   },
   {
-    title: "Random Acts of Senseless Violence",
-    author: "Jack Womack",
+    title: 'Random Acts of Senseless Violence',
+    author: 'Jack Womack',
     summary:
-      "Lola Hart is an ordinary twelve-year-old girl. She comes from a comfortable family, attends an exclusive private school, loves her friends Lori and Katherine, teases her sister Boob. But in the increasingly troubled city where she lives (a near-future Manhattan) she is a dying breed. Riots, fire, TB outbreaks, roaming gangs, increasing inflation, political and civil unrest all threaten her way of life, as well as the very fabric of New York City.",
+      'Lola Hart is an ordinary twelve-year-old girl. She comes from a comfortable family, attends an exclusive private school, loves her friends Lori and Katherine, teases her sister Boob. But in the increasingly troubled city where she lives (a near-future Manhattan) she is a dying breed. Riots, fire, TB outbreaks, roaming gangs, increasing inflation, political and civil unrest all threaten her way of life, as well as the very fabric of New York City.',
   },
   {
-    title: "Little Big Man",
-    author: "Thomas Berger",
+    title: 'Little Big Man',
+    author: 'Thomas Berger',
     summary:
-      "Jack Crabb was brought up by Indians. He won the name Little Big Man. He dressed in skins, feasted on dog, loved four wives and saw his people butchered by the horse soldiers of General Custer, the man he had sworn to kill.",
+      'Jack Crabb was brought up by Indians. He won the name Little Big Man. He dressed in skins, feasted on dog, loved four wives and saw his people butchered by the horse soldiers of General Custer, the man he had sworn to kill.',
   },
   {
-    title: "The Time of Man",
-    author: "Elizabeth Madox Roberts",
+    title: 'The Time of Man',
+    author: 'Elizabeth Madox Roberts',
     summary:
-      "_The Time of Man_ traces the coming of age of Ellen Chesser, the daughter of a poor itinerant farmer. Against all privations and the forces that would subdue her, Ellen is sustained by a sense of wonder and by an awareness of her own being. Reduced to the bare elements of life, her world becomes a ceremony of daily duties that bind her to the natural world and her family.",
+      '_The Time of Man_ traces the coming of age of Ellen Chesser, the daughter of a poor itinerant farmer. Against all privations and the forces that would subdue her, Ellen is sustained by a sense of wonder and by an awareness of her own being. Reduced to the bare elements of life, her world becomes a ceremony of daily duties that bind her to the natural world and her family.',
   },
   {
-    title: "The Warriors",
-    author: "J. Glenn Gray",
+    title: 'The Warriors',
+    author: 'J. Glenn Gray',
     summary:
-      "J. Glenn Gray entered the army as a private in May 1941, having been drafted on the same day he was informed of his doctorate in philosophy from Columbia University. He was discharged as a second lieutenant in October 1945, having been awarded a battlefield commission during fighting in France. Gray saw service in North Africa, Italy, France, and Germany in a counter-espionage unit.",
+      'J. Glenn Gray entered the army as a private in May 1941, having been drafted on the same day he was informed of his doctorate in philosophy from Columbia University. He was discharged as a second lieutenant in October 1945, having been awarded a battlefield commission during fighting in France. Gray saw service in North Africa, Italy, France, and Germany in a counter-espionage unit.',
   },
   {
-    title: "Buffalo Soldiers",
+    title: 'Buffalo Soldiers',
     author: "Robert O'Connor",
     summary:
       "Peace is hell and the U.S. Army is its ninth circle. In that hell, Specialist Ray Elwood is the ultimate survivor: a high-stakes drug dealer, bureaucratic con artist, and shrewd collector of other people's secrets. Elwood is contemplating cleaning up his act, although doing so will require one last, epic heroin deal.",
   },
   {
-    title: "American Purgatorio",
-    author: "John Haskell",
+    title: 'American Purgatorio',
+    author: 'John Haskell',
     summary:
-      "The story of a happily married man who discovers, as he walks out of a convenience store, that his wife has suddenly vanished.",
+      'The story of a happily married man who discovers, as he walks out of a convenience store, that his wife has suddenly vanished.',
   },
   {
-    title: "Voyage in the Dark",
-    author: "Jean Rhys",
+    title: 'Voyage in the Dark',
+    author: 'Jean Rhys',
     summary:
-      "Anna Morgan, eighteen years old, is catapulted to England from the West Indies after the death of her beloved father. Working as a chorus girl, Anna drifts into the demi-monde of Edwardian London. But there, dismayed by the unfamiliar cold and greyness, she is absolutely alone and unconsciously floating from innocence to harsh experience.",
+      'Anna Morgan, eighteen years old, is catapulted to England from the West Indies after the death of her beloved father. Working as a chorus girl, Anna drifts into the demi-monde of Edwardian London. But there, dismayed by the unfamiliar cold and greyness, she is absolutely alone and unconsciously floating from innocence to harsh experience.',
   },
   {
-    title: "Good Morning, Midnight",
-    author: "Jean Rhys",
+    title: 'Good Morning, Midnight',
+    author: 'Jean Rhys',
     summary:
-      "Augustine, a brilliant, aging astronomer, is consumed by the stars. For years he has lived in remote outposts, studying the sky for evidence of how the universe began. At his latest posting, in a research center in the Arctic, news of a catastrophic event arrives. The scientists are forced to evacuate, but Augustine stubbornly refuses to abandon his work.",
+      'Augustine, a brilliant, aging astronomer, is consumed by the stars. For years he has lived in remote outposts, studying the sky for evidence of how the universe began. At his latest posting, in a research center in the Arctic, news of a catastrophic event arrives. The scientists are forced to evacuate, but Augustine stubbornly refuses to abandon his work.',
   },
   {
-    title: "Our Sister Killjoy: or, Reflections from a Black-Eyed Squint",
-    author: "Ama Ata Aidoo",
-    summary: "A young woman from post-independent Ghana goes to Europe.",
+    title: 'Our Sister Killjoy: or, Reflections from a Black-Eyed Squint',
+    author: 'Ama Ata Aidoo',
+    summary: 'A young woman from post-independent Ghana goes to Europe.',
   },
   {
-    title: "The Book of Ebenezer Le Page",
-    author: "G. B. Edwards",
+    title: 'The Book of Ebenezer Le Page',
+    author: 'G. B. Edwards',
     summary:
-      "Ebenezer Le Page, cantankerous, opinionated, and charming, is one of the most compelling literary creations of the late twentieth century. Eighty years old, Ebenezer has lived his whole life on the Channel Island of Guernsey, a stony speck of a place caught between the coasts of England and France yet a world apart from either. Ebenezer himself is fiercely independent, but as he reaches the end of his life he is determined to tell his own story and the stories of those he has known. He writes of family secrets and feuds, unforgettable friendships and friendships betrayed, love glimpsed and lost.",
+      'Ebenezer Le Page, cantankerous, opinionated, and charming, is one of the most compelling literary creations of the late twentieth century. Eighty years old, Ebenezer has lived his whole life on the Channel Island of Guernsey, a stony speck of a place caught between the coasts of England and France yet a world apart from either. Ebenezer himself is fiercely independent, but as he reaches the end of his life he is determined to tell his own story and the stories of those he has known. He writes of family secrets and feuds, unforgettable friendships and friendships betrayed, love glimpsed and lost.',
   },
   {
-    title: "The Box Man",
-    author: "Kobo Abe",
+    title: 'The Box Man',
+    author: 'Kobo Abe',
     summary:
-      "The story of a nameless man who decides to take up residence inside a large box with an eyehole cut into it, through which he is free to observe the world without participating in it. As he sheds his own identity and assumes the identity of a Box Man, he discovers that he has not severed his relationship to others but formed a new and more dangerous one.",
+      'The story of a nameless man who decides to take up residence inside a large box with an eyehole cut into it, through which he is free to observe the world without participating in it. As he sheds his own identity and assumes the identity of a Box Man, he discovers that he has not severed his relationship to others but formed a new and more dangerous one.',
   },
   {
-    title: "The Groves of Academe",
-    author: "Mary McCarthy",
+    title: 'The Groves of Academe',
+    author: 'Mary McCarthy',
     summary:
-      "Jocelyn College is staffed by self-righteous hypocrites, dim-witted bureaucrats, and petty grifters. The students are earnest and clueless. The place runs on paranoia and betrayal. And yet, somehow, the life of the mind endures, if only barely and by default.",
+      'Jocelyn College is staffed by self-righteous hypocrites, dim-witted bureaucrats, and petty grifters. The students are earnest and clueless. The place runs on paranoia and betrayal. And yet, somehow, the life of the mind endures, if only barely and by default.',
   },
 ];
 
-var gameList = [".synopsis start", ".backspeak", ".rps", ".coffee", ".tea"];
+var gameList = ['.synopsis start', '.backspeak', '.rps', '.coffee', '.tea'];
 
 var bookNo = -1;
 
@@ -1121,18 +1121,18 @@ function getWordathonTeam(player) {
     return false;
   }
   if (wordathon[player]) {
-    if (teams["Wordsmiths"].indexOf(player) == -1) {
-      return "Scribblers";
+    if (teams['Wordsmiths'].indexOf(player) == -1) {
+      return 'Scribblers';
     }
-    return "Wordsmiths";
+    return 'Wordsmiths';
   }
   wordathon[player] = [];
-  if (teams["Wordsmiths"].length < teams["Scribblers"].length) {
-    teams["Wordsmiths"].push(player);
-    return "Wordsmiths";
+  if (teams['Wordsmiths'].length < teams['Scribblers'].length) {
+    teams['Wordsmiths'].push(player);
+    return 'Wordsmiths';
   }
-  teams["Scribblers"].push(player);
-  return "Scribblers";
+  teams['Scribblers'].push(player);
+  return 'Scribblers';
 }
 
 function sortProperties(obj) {
@@ -1175,24 +1175,24 @@ function addSummaryMessage(id) {
   game.summaryMessages.push(id);
 }
 
-client.on("ready", () => {
-  console.log("I am ready!");
+client.on('ready', () => {
+  console.log('I am ready!');
   game = {};
   shuffle(gameList);
   shuffle(books);
   client.user.setActivity(gameList[1], {
-    type: "PLAYING",
+    type: 'PLAYING',
   });
   setInterval(function () {
     shuffle(gameList);
     client.user.setActivity(gameList[1], {
-      type: "PLAYING",
+      type: 'PLAYING',
     });
   }, 600000);
 });
 
 // Create an event listener for messages
-client.on("message", (message) => {
+client.on('message', (message) => {
   // Our bot needs to know if it will execute a command
   // It will listen for messages that will start with `!`
 
@@ -1210,13 +1210,13 @@ client.on("message", (message) => {
     afk.indexOf(message.author.id) != -1 &&
     afkCooldown.indexOf(message.author.id) == -1 &&
     !(
-      message.content.toLowerCase().indexOf("morning") != -1 &&
-      message.content.toLowerCase().indexOf("bookery") != -1
+      message.content.toLowerCase().indexOf('morning') != -1 &&
+      message.content.toLowerCase().indexOf('bookery') != -1
     )
   ) {
     message.author
       .send(
-        "It appears that you are no longer AFK. Would you like to turn AFK off? If so, react with a ✅ to this message. This message will be deleted in 30 seconds if you do not reply."
+        'It appears that you are no longer AFK. Would you like to turn AFK off? If so, react with a ✅ to this message. This message will be deleted in 30 seconds if you do not reply.'
       )
       .then((response) => {
         afkCooldown.push(message.author.id);
@@ -1228,15 +1228,15 @@ client.on("message", (message) => {
           .fetchMessages({ limit: 1 })
           .then((messages) => {
             lastMessage = messages.first();
-            lastMessage.react("✅");
+            lastMessage.react('✅');
             const filter = () => {
               return true;
             };
             lastMessage
-              .awaitReactions(filter, { max: 2, time: 30000, errors: ["time"] })
+              .awaitReactions(filter, { max: 2, time: 30000, errors: ['time'] })
               .then((collected) => {
                 afk.splice(afk.indexOf(message.author.id), 1);
-                message.author.send("AFK has been turned off.");
+                message.author.send('AFK has been turned off.');
               })
               .catch((collected) => {
                 lastMessage.delete();
@@ -1245,47 +1245,47 @@ client.on("message", (message) => {
       });
   }
 
-  if (message.content.substring(0, 1).toLowerCase() == ".") {
-    if (message.content.substring(0, 2).toLowerCase() == ". ") {
-      var args = message.content.substring(2).split(" ");
+  if (message.content.substring(0, 1).toLowerCase() == '.') {
+    if (message.content.substring(0, 2).toLowerCase() == '. ') {
+      var args = message.content.substring(2).split(' ');
       var cmd = args[0];
       args = args.splice(1);
     } else {
-      var args = message.content.substring(1).split(" ");
+      var args = message.content.substring(1).split(' ');
       var cmd = args[0];
       args = args.splice(1);
     }
     switch (cmd.toLowerCase()) {
-      case "hello":
-        message.channel.send("Hey there! Nice to meet you!");
+      case 'hello':
+        message.channel.send('Hey there! Nice to meet you!');
         break;
-      case "words":
+      case 'words':
         switch (args[0]) {
-          case "intro":
+          case 'intro':
             message.channel.send(
-              "__**Word-a-thon Rules**__\nUse `.words join` to join a team.\nWhenever you write, use the command `.words add [n]` to add your word count to the leaderboard (example: `.words add 1971`). When you want to see the rankings, use `.words leaderboard`.\nThe leaderboard will be reset weekly."
+              '__**Word-a-thon Rules**__\nUse `.words join` to join a team.\nWhenever you write, use the command `.words add [n]` to add your word count to the leaderboard (example: `.words add 1971`). When you want to see the rankings, use `.words leaderboard`.\nThe leaderboard will be reset weekly.'
             );
             break;
-          case "join":
-          case "jointeam":
-          case "team":
-          case "getteam":
+          case 'join':
+          case 'jointeam':
+          case 'team':
+          case 'getteam':
             message.channel.send(
               "You've joined the **" +
                 getWordathonTeam(message.author.tag) +
-                "**!"
+                '**!'
             );
             break;
-          case "add":
+          case 'add':
             if (!parseInt(args[1]) || parseInt(args[1]) <= 0) {
-              message.channel.send("That is an invalid number of words.");
+              message.channel.send('That is an invalid number of words.');
               break;
             }
             getWordathonTeam();
             if (args[2]) {
-              var project = args.splice(2).join(" ");
+              var project = args.splice(2).join(' ');
             } else {
-              var project = "_Uncategorized_";
+              var project = '_Uncategorized_';
             }
             if (!wordathon[message.author.tag]) {
               wordathon[message.author.tag] = [];
@@ -1295,16 +1295,16 @@ client.on("message", (message) => {
             }
             wordathon[message.author.tag][project] += parseInt(args[1]);
             message.channel.send(
-              "Added **" +
+              'Added **' +
                 args[1] +
                 ' words** to your project, "' +
                 project +
                 '". Run `.words leaderboard` to see the rankings or `.words self` to see your own words!'
             );
             break;
-          case "lb":
-          case "leaderboard":
-            var leaderboard = "Here are the rankings so far:\n";
+          case 'lb':
+          case 'leaderboard':
+            var leaderboard = 'Here are the rankings so far:\n';
             var l = 1;
             var rankings = {};
             for (var player in wordathon) {
@@ -1317,54 +1317,54 @@ client.on("message", (message) => {
             sortProperties(rankings);
             for (var rank in rankings) {
               leaderboard +=
-                "\n" +
+                '\n' +
                 l +
-                ". " +
+                '. ' +
                 rank +
-                " (" +
+                ' (' +
                 getWordathonTeam(rank) +
-                "): " +
+                '): ' +
                 rankings[rank] +
-                " words written";
+                ' words written';
             }
             l++;
             if (isEmpty(wordathon)) {
               leaderboard +=
                 "\nNo one's written anything yet. Come on, y'all! You can do better than that.";
             }
-            leaderboard += "\n";
+            leaderboard += '\n';
             message.channel.send(leaderboard);
             break;
-          case "self":
+          case 'self':
             var wordcount = 0;
             var wordsreport =
-              "**" +
+              '**' +
               message.author.tag +
-              "**\nTeam: _" +
+              '**\nTeam: _' +
               getWordathonTeam(message.author.tag) +
-              "_\n";
-            var projects = "";
+              '_\n';
+            var projects = '';
             for (var project in wordathon[message.author.tag]) {
               wordcount += wordathon[message.author.tag][project];
               projects +=
-                "\n" +
+                '\n' +
                 project +
-                ": " +
+                ': ' +
                 wordathon[message.author.tag][project] +
-                " words";
+                ' words';
             }
             wordsreport +=
               (projects ? projects : "\nYou haven't written anything yet.") +
-              "\n\nRun `.words add [number of words] [project name]` to add to your score.";
+              '\n\nRun `.words add [number of words] [project name]` to add to your score.';
             message.channel.send(wordsreport);
             break;
-          case "reset":
-            if (message.author.id == "530925903757443094") {
+          case 'reset':
+            if (message.author.id == '530925903757443094') {
               wordathon = {};
-              message.channel.send("Leaderboard reset.");
+              message.channel.send('Leaderboard reset.');
             } else {
               message.channel.send(
-                "You do not have permission to reset the leaderboard."
+                'You do not have permission to reset the leaderboard.'
               );
             }
             break;
@@ -1375,30 +1375,30 @@ client.on("message", (message) => {
             break;
         }
         break;
-      case "backspeak":
+      case 'backspeak':
         switch (args[0]) {
-          case "intro":
+          case 'intro':
             message.channel.send(
-              "__**Backspeak Rules**__\nBackspeak is really a very simple game. When you run `.backspeak`, I will post a random string of words to the chat. The first person to post the words reversed in order in the chat wins."
+              '__**Backspeak Rules**__\nBackspeak is really a very simple game. When you run `.backspeak`, I will post a random string of words to the chat. The first person to post the words reversed in order in the chat wins.'
             );
             break;
           default:
             shuffle(words);
-            message.channel.send("**3...**");
+            message.channel.send('**3...**');
             setTimeout(function () {
-              message.channel.send("**2...**");
+              message.channel.send('**2...**');
               setTimeout(function () {
-                message.channel.send("**1...**");
+                message.channel.send('**1...**');
                 setTimeout(function () {
-                  message.channel.send(words.slice(0, 10).join(" "));
-                  backspeakListening = words.slice(0, 10).reverse().join(" ");
+                  message.channel.send(words.slice(0, 10).join(' '));
+                  backspeakListening = words.slice(0, 10).reverse().join(' ');
                 }, 1000);
               }, 1000);
             }, 1000);
             break;
         }
         break;
-      case "synopsis":
+      case 'synopsis':
         /*
           switch(args[0]) {
             case "intro":
@@ -1563,33 +1563,33 @@ client.on("message", (message) => {
           }
           break;*/
 
-        message.channel.send("Currently under construction. Check back later!");
+        message.channel.send('Currently under construction. Check back later!');
         break;
-      case "rps":
-        message.channel.send("**Rock...**");
+      case 'rps':
+        message.channel.send('**Rock...**');
         setTimeout(function () {
-          message.channel.send("**Paper...**");
+          message.channel.send('**Paper...**');
           setTimeout(function () {
-            message.channel.send("**Scissors!!!**");
+            message.channel.send('**Scissors!!!**');
           }, 4000);
         }, 4000);
         break;
-      case "shoot":
+      case 'shoot':
         message.channel.send(
-          "Violence is never the answer. Do... Do you need a `.hug`?"
+          'Violence is never the answer. Do... Do you need a `.hug`?'
         );
         break;
-      case "hug":
-        if (args[0] && args[0].toLowerCase() != "me") {
+      case 'hug':
+        if (args[0] && args[0].toLowerCase() != 'me') {
           if (parseInt(args[0])) {
             message.channel.send(
-              "_hugs <@" + args[0] + ">_\nDon't worry, it'll be all right."
+              '_hugs <@' + args[0] + ">_\nDon't worry, it'll be all right."
             );
           } else {
             function setName(input) {
               name = input;
             }
-            var name = args.join(" ");
+            var name = args.join(' ');
             //Replace with mention if possible
             message.channel.members.forEach((member) => {
               if (
@@ -1599,28 +1599,28 @@ client.on("message", (message) => {
                   .toLowerCase()
                   .indexOf(name.toLowerCase()) != -1
               )
-                name = "<@" + member.id + ">";
+                name = '<@' + member.id + '>';
             });
             message.channel.send(
-              "_hugs " + name + "_\nDon't worry, it'll be all right."
+              '_hugs ' + name + "_\nDon't worry, it'll be all right."
             );
           }
         } else {
           message.channel.send(
-            "_hugs " + message.author + "_\nDon't worry, it'll be all right."
+            '_hugs ' + message.author + "_\nDon't worry, it'll be all right."
           );
         }
         message.delete();
         break;
-      case "jail":
-        if (args[0] && args[0].toLowerCase() != "me") {
+      case 'jail':
+        if (args[0] && args[0].toLowerCase() != 'me') {
           if (parseInt(args[0])) {
-            message.channel.send("_puts <@" + args[0] + "> in jail_");
+            message.channel.send('_puts <@' + args[0] + '> in jail_');
           } else {
             function setName(input) {
               name = input;
             }
-            var name = args.join(" ");
+            var name = args.join(' ');
             //Replace with mention if possible
             message.channel.members.forEach((member) => {
               if (
@@ -1630,20 +1630,20 @@ client.on("message", (message) => {
                   .toLowerCase()
                   .indexOf(name.toLowerCase()) != -1
               )
-                name = "<@" + member.id + ">";
+                name = '<@' + member.id + '>';
             });
-            message.channel.send("_puts " + name + " in jail_");
+            message.channel.send('_puts ' + name + ' in jail_');
           }
         } else {
-          message.channel.send("_puts " + message.author + " in jail_");
+          message.channel.send('_puts ' + message.author + ' in jail_');
         }
         message.delete();
         break;
-      case "afk":
+      case 'afk':
         if (afk.indexOf(message.author.id) == -1) {
           afk.push(message.author.id);
           message.author.send(
-            "You have been marked as AFK and anyone pinging you will be notified that you are unable to respond."
+            'You have been marked as AFK and anyone pinging you will be notified that you are unable to respond.'
           );
           afkCooldown.push(message.author.id);
           setTimeout(function () {
@@ -1652,25 +1652,25 @@ client.on("message", (message) => {
           message.delete();
         } else {
           afk.splice(afk.indexOf(message.author.id), 1);
-          message.author.send("AFK has been turned off.");
+          message.author.send('AFK has been turned off.');
           message.delete();
         }
         break;
-      case "summon":
-        if (args[0] && args[0].toLowerCase() != "me") {
+      case 'summon':
+        if (args[0] && args[0].toLowerCase() != 'me') {
           if (parseInt(args[0])) {
             message.channel.send(
-              "_:candle: " +
+              '_:candle: ' +
                 message.author +
-                " summons <@" +
+                ' summons <@' +
                 args[0] +
-                "> :candle:_"
+                '> :candle:_'
             );
           } else {
             function setName(input) {
               name = input;
             }
-            var name = args.join(" ");
+            var name = args.join(' ');
             //Replace with mention if possible
             message.channel.members.forEach((member) => {
               if (
@@ -1680,62 +1680,62 @@ client.on("message", (message) => {
                   .toLowerCase()
                   .indexOf(name.toLowerCase()) != -1
               )
-                name = "<@" + member.id + ">";
+                name = '<@' + member.id + '>';
             });
-            if (name != "@everyone") {
+            if (name != '@everyone') {
               message.channel.send(
-                "_:candle: " +
+                '_:candle: ' +
                   message.author +
-                  " summons " +
+                  ' summons ' +
                   name +
-                  " :candle:_"
+                  ' :candle:_'
               );
             } else {
               message.channel.send(
-                "_:candle: " +
+                '_:candle: ' +
                   message.author +
-                  " summons the entire server :candle:_"
+                  ' summons the entire server :candle:_'
               );
             }
           }
         } else {
           message.channel.send(
-            "_:candle: " + message.author + " summons nobody :candle:_"
+            '_:candle: ' + message.author + ' summons nobody :candle:_'
           );
         }
         message.delete();
         break;
-      case "coffee":
-        message.channel.send(Math.random() < 0.5 ? ":coffee:" : ":coffin:");
+      case 'coffee':
+        message.channel.send(Math.random() < 0.5 ? ':coffee:' : ':coffin:');
         break;
-      case "tea":
+      case 'tea':
         message.channel.send(
-          Math.random() < 0.5 ? ":tea:" : ":deciduous_tree:"
+          Math.random() < 0.5 ? ':tea:' : ':deciduous_tree:'
         );
         break;
-      case "help":
+      case 'help':
         if (!args.length) {
           message.channel.send(
-            "__**Finriq Commands**__\n*Use `.help [category]` for commands under that category.*\n`General`\n`Games`\n`Word-a-Thon`\n`Read-a-Thon`"
+            '__**Finriq Commands**__\n*Use `.help [category]` for commands under that category.*\n`General`\n`Games`\n`Word-a-Thon`\n`Read-a-Thon`'
           );
-        } else if (args[0].toLowerCase() == "general") {
+        } else if (args[0].toLowerCase() == 'general') {
           message.channel.send(
             '__**General Commands**__\n`.afk`: Notifies users who try to ping you that you are away and can\'t reply to messages at the moment. AFK is automatically turned on when you send "Good night, Bookery!" and off when you send "Good morning, Bookery!"\n`.help [category | command]`: Displays category list, or commands under a category if one is specified.\n`.hello`: Says hello. Use to test if bot is online.\n`.jail [user]`: puts _user_ in jail, or author if _user_ not present\n`.shoot [user]`: Shoots _user_\n`.summon [user]`: summons _user_\n`.hug [user]`: hugs _user_ if present, if not hugs author of command\n`.coffee`: Replies with a random choice of :coffee: or :coffin: (Finriq version of Russian Roulette)\n`.tea`: Replies with a random choice of :tea: or :deciduous_tree: (tea-drinker version of the coffee command)'
           );
-        } else if (args[0].toLowerCase() == "games") {
+        } else if (args[0].toLowerCase() == 'games') {
           message.channel.send(
-            "__**Game Commands**__\n`.backspeak`: Starts a round of backspeak.\n`.rps`: Starts a rock paper scissors game."
+            '__**Game Commands**__\n`.backspeak`: Starts a round of backspeak.\n`.rps`: Starts a rock paper scissors game.'
           );
         } else if (
-          args[0].toLowerCase().replace("-", "") == "wordathon" ||
-          args[0].toLowerCase() == "wat"
+          args[0].toLowerCase().replace('-', '') == 'wordathon' ||
+          args[0].toLowerCase() == 'wat'
         ) {
           message.channel.send(
-            "__**Word-a-Thon Commands**__\n*Under construction. Use at your own risk.*\n`.synopsis intro`: Gives an intro to the game.\n`.synopsis start [min-players]`: Starts a new game after min-players (default 2) players join.\n`.synopsis round`: Starts the next round of the game. Requires game creator.\n`.synopsis leaderboard`: Views the rankings so far.\n`.synopsis end`: Ends the current game. Requires game creator. (Cannot be run while game is in progress)\n"
+            '__**Word-a-Thon Commands**__\n*Under construction. Use at your own risk.*\n`.synopsis intro`: Gives an intro to the game.\n`.synopsis start [min-players]`: Starts a new game after min-players (default 2) players join.\n`.synopsis round`: Starts the next round of the game. Requires game creator.\n`.synopsis leaderboard`: Views the rankings so far.\n`.synopsis end`: Ends the current game. Requires game creator. (Cannot be run while game is in progress)\n'
           );
         } else if (
-          args[0].toLowerCase().replace("-", "") == "readathon" ||
-          args[0].toLowerCase() == "rat"
+          args[0].toLowerCase().replace('-', '') == 'readathon' ||
+          args[0].toLowerCase() == 'rat'
         ) {
         } else {
           message.channel.send(
@@ -1747,38 +1747,38 @@ client.on("message", (message) => {
   } else if (
     game.acceptingSummaries &&
     message.author.bot == false &&
-    message.channel.type === "dm"
+    message.channel.type === 'dm'
   ) {
     var submitted = false;
     for (var p in game.summaries) {
       if (game.summaries[p].author.id == message.author.id) {
         game.summaries[p].summary = message.content;
         submitted = true;
-        message.channel.send("Your submission has been updated.");
+        message.channel.send('Your submission has been updated.');
       }
     }
     if (!submitted) {
       game.summaries.push({ author: message.author, summary: message.content });
       message.channel.send(
-        "I have recorded your response. To change it, send another message here before the time limit runs out."
+        'I have recorded your response. To change it, send another message here before the time limit runs out.'
       );
     }
-  } else if (message.channel.id == "711269048591056916") {
-    message.react("👋");
-  } else if (message.channel.id == "705240176842113024") {
-    message.react("💯");
+  } else if (message.channel.id == '711269048591056916') {
+    message.react('👋');
+  } else if (message.channel.id == '705240176842113024') {
+    message.react('💯');
   } else if (backspeakListening) {
     if (message.content == backspeakListening) {
-      message.channel.send("And the winner is... " + message.author + "!");
+      message.channel.send('And the winner is... ' + message.author + '!');
       backspeakListening = false;
     }
   } else if (
-    (message.content.toLowerCase().indexOf("goodnight") != -1 ||
-      message.content.toLowerCase().indexOf("good night") != -1) &&
-    message.content.toLowerCase().indexOf("bookery") != -1 &&
+    (message.content.toLowerCase().indexOf('goodnight') != -1 ||
+      message.content.toLowerCase().indexOf('good night') != -1) &&
+    message.content.toLowerCase().indexOf('bookery') != -1 &&
     !message.author.bot
   ) {
-    message.react("🌛");
+    message.react('🌛');
     if (afk.indexOf(message.author.id) == -1) {
       afk.push(message.author.id);
       afkCooldown.push(message.author.id);
@@ -1786,29 +1786,29 @@ client.on("message", (message) => {
         afkCooldown.splice(afkCooldown.indexOf(message.author.id), 1);
       }, 300000);
       message.author.send(
-        "You have been marked as Away-From-Keyboard and anyone pinging you will be notified that you are unable to respond."
+        'You have been marked as Away-From-Keyboard and anyone pinging you will be notified that you are unable to respond.'
       );
     }
   } else if (
-    message.content.toLowerCase().indexOf("morning") != -1 &&
-    message.content.toLowerCase().indexOf("bookery") != -1 &&
+    message.content.toLowerCase().indexOf('morning') != -1 &&
+    message.content.toLowerCase().indexOf('bookery') != -1 &&
     !message.author.bot
   ) {
-    message.react("🌄");
+    message.react('🌄');
     if (afk.indexOf(message.author.id) != -1) {
       afk.splice(afk.indexOf(message.author.id), 1);
-      message.author.send("AFK has been turned off.");
+      message.author.send('AFK has been turned off.');
     }
   } else if (
-    message.content.toLowerCase() == ":slight_smile:" ||
-    message.content.toLowerCase() == "🙂"
+    message.content.toLowerCase() == ':slight_smile:' ||
+    message.content.toLowerCase() == '🙂'
   ) {
-    message.react("🙃");
+    message.react('🙃');
   }
 });
 
 process.env.BOT_TOKEN =
-  "NjkzODQwMDQ0MDMyNzg2NDQ0.XsXTLA.jrK_mfVA6ILpEqFuHGSyfX4yJQw";
+  'NjkzODQwMDQ0MDMyNzg2NDQ0.XsXTLA.jrK_mfVA6ILpEqFuHGSyfX4yJQw';
 
 // Log our bot in using the token from https://discordapp.com/developers/applications/me
 client.login(process.env.BOT_TOKEN);

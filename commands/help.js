@@ -1,5 +1,5 @@
-const Discord = require("discord.js");
-const config = require("../config.json");
+const Discord = require('discord.js');
+const config = require('../config.json');
 
 var prefix = config.prefix;
 
@@ -14,11 +14,11 @@ module.exports.execute = async (client, message, args) => {
   let commandNames = [];
 
   if (!args || args.length === 0) {
-    var modulelist = "";
+    var modulelist = '';
 
     let helpMessage = new Discord.RichEmbed()
-      .setColor("#750384")
-      .setTitle("List of available modules")
+      .setColor('#750384')
+      .setTitle('List of available modules')
       .setDescription(
         `Modules available in ${message.guild.name}. Use \`.help [module]\` for more about a specific module, or \`.help all\` for all commands.`
       );
@@ -42,14 +42,14 @@ module.exports.execute = async (client, message, args) => {
 
     if (command) {
       let helpMessage = new Discord.RichEmbed()
-        .setColor("#750384")
+        .setColor('#750384')
         .setTitle(`${prefix}${command.config.name}`)
         .setDescription(
           `You asked for information on \`${prefix}${command.config.name}\``
         );
-      helpMessage.addField("Description:", command.config.description);
-      helpMessage.addField("Aliases:", command.config.aliases);
-      helpMessage.addField("Usage:", command.config.usage);
+      helpMessage.addField('Description:', command.config.description);
+      helpMessage.addField('Aliases:', command.config.aliases);
+      helpMessage.addField('Usage:', command.config.usage);
 
       try {
         message.channel.send(helpMessage);
@@ -61,7 +61,7 @@ module.exports.execute = async (client, message, args) => {
         var modCmd = args[0].toLowerCase(); // User input
 
         let helpMessage = new Discord.RichEmbed()
-          .setColor("#750384")
+          .setColor('#750384')
           .setTitle(`${capitalizeFLetter(modCmd)}`)
           .setDescription(`You asked for commands under the ${modCmd} module`);
 
@@ -81,11 +81,11 @@ module.exports.execute = async (client, message, args) => {
         } catch (err) {
           console.log(err);
         }
-      } else if (args[0].toLowerCase() == "all") {
+      } else if (args[0].toLowerCase() == 'all') {
         modCmd = args[0].toLowerCase();
 
         let helpMessage = new Discord.RichEmbed()
-          .setColor("#750384")
+          .setColor('#750384')
           .setTitle(`${capitalizeFLetter(modCmd)}`)
           .setDescription(`You asked for all commands`);
 
@@ -127,12 +127,12 @@ async function didYouMean(commands, search, message) {
     if (str.length > 1) {
       let arr = [];
       for (let string of str) {
-        arr.push(string.split(""));
+        arr.push(string.split(''));
       }
       for (let i = 0; i < arr.length; i++) {
         score[i] = 0;
         for (let j = 0; j < arr[i].length; j++) {
-          if (search.split("")[j] === arr[i][j]) {
+          if (search.split('')[j] === arr[i][j]) {
             score[i]++;
           }
         }
@@ -184,10 +184,10 @@ function levenshtein(searchTerm, commandName) {
 }
 
 module.exports.config = {
-  name: "help",
-  aliases: ["help"],
-  module: "Utility",
+  name: 'help',
+  aliases: ['help'],
+  module: 'Utility',
   description:
-    "I will send you this message, or the usage of a specific command.",
-  usage: ["help", "help command"],
+    'I will send you this message, or the usage of a specific command.',
+  usage: ['help', 'help command'],
 };
