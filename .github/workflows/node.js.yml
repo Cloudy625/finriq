@@ -26,7 +26,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
     - name: Lint Action
-      uses: samuelmeuli/lint-action@v1.5.3
+      uses: samuelmeuli/lint-action@v1
       with:
         github_token: ${{ secrets.github_token }}
         # Enable linters
