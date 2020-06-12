@@ -1,11 +1,14 @@
-module.exports.execute = async (client, message, args) => {
-  return await message.channel.send(Math.random() < 0.5 ? ":beverage_box:" : ":fox:");
+module.exports.execute = async (message) => {
+  return await message.channel.send(
+    Math.random() < 0.5 ? ":beverage_box:" : ":fox:"
+  );
 };
 
 module.exports.config = {
-  name: 'juice',
-  aliases: ['juice', 'juicebox', 'fox'],
+  name: "juice",
+  aliases: ["juice", "juicebox", "fox"],
   module: "Fun",
-  description: 'I will choose either :beverage_box: or :fox:. (My version of Russian Roulette)',
-  usage: ['juice']
+  description:
+    "I will choose either :beverage_box: or :fox:. (My version of Russian Roulette)",
+  usage: ["juice"],
 };

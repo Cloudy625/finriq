@@ -3,9 +3,9 @@ module.exports.execute = async (client, message, args) => {
 };
 
 module.exports.config = {
-  name: 'wordathon',
-  aliases: ['wat', 'word-a-thon'],
+  name: "readathon",
+  aliases: ["rat", "read-a-thon"],
   module: "Games",
-  description: 'Under construction.',
-  usage: ['wordathon']
+  description: "Under construction.",
+  usage: ["readathon"],
 };
