@@ -1,13 +1,19 @@
 const config = require('../config.json');
 
 class tosActions {
-	static userAcceptsTOS(reaction, user, client) {
-		if (reaction.message.channel.id === config.channels.tos
-            && reaction._emoji.name === config.emotes.acceptTOS) {
-			reaction.message.guild.fetchMember(user.id).then(guildMember => {
+  static userAcceptsTOS(reaction, user, client) {
+    if (
+      reaction.message.channel.id === config.channels.tos &&
+      reaction._emoji.name === config.emotes.acceptTOS
+    ) {
+      reaction.message.guild.fetchMember(user.id).then(() => {
         // Add roles and send welcome message to the welcome channel
-        client.channels.get(config.channels.welcome).send(`🎉 **A new member has arrived!** 🎉\nPlease welcome <@${user.id}> to The Bookery <@&693517619457818634>!`)
-          .then(message => {
+        client.channels
+          .get(config.channels.welcome)
+          .send(
+            `🎉 **A new member has arrived!** 🎉\nPlease welcome <@${user.id}> to The Bookery <@&693517619457818634>!`
+          )
+          .then((message) => {
             message.react(config.emotes.wave);
           });
         user.send(`\`\`\`fix
@@ -24,10 +30,9 @@ We are a reading server, and we host multiple reading groups! Learn more in the 
 
 **About Me**
 I'm Finriq, a custom bot made for The Bookery! I am always growing. Use \`.help\` in <#693561975887888444> for more on what I can do.`);
-			});
-		}
-	}
-
+      });
+    }
+  }
 }
 
 module.exports = tosActions;

@@ -159,13 +159,14 @@ module.exports.execute = async (client, message, args) => {
       message.channel.send('Hmm... I don\'t know that command. Try `.help` to get a list of commands.');
       break;
   }*/
-  channel.message.send("Under construction.");
+  channel.message.send('Under construction.');
 };
 
 module.exports.config = {
   name: 'synopsis',
   aliases: ['syn'],
-  module: "Games",
-  description: 'When the game starts, I will give everyone a random book title. Each player will DM me a made-up summary of what the book is about.\nOnce everyone has sent in their summaries, I\'ll list them in the chat where everyone can see them, but no one will see who posted which summary. In addition, I will throw in the _real_ summary of the book. Everyone will vote on what they think the real summary is.\nOnce people have voted, I tally up the points. If someone thinks your summary is the real one, you get one point. If you guess the correct summary, you get three points. Points carry over into the next round until the `.synopsis end` command is run.\nSound fun? run `.synopsis start [min-players]` to start!.',
-  usage: ['synopsis [start | round | leaderboard | end]']
+  module: 'Games',
+  description:
+    "When the game starts, I will give everyone a random book title. Each player will DM me a made-up summary of what the book is about.\nOnce everyone has sent in their summaries, I'll list them in the chat where everyone can see them, but no one will see who posted which summary. In addition, I will throw in the _real_ summary of the book. Everyone will vote on what they think the real summary is.\nOnce people have voted, I tally up the points. If someone thinks your summary is the real one, you get one point. If you guess the correct summary, you get three points. Points carry over into the next round until the `.synopsis end` command is run.\nSound fun? run `.synopsis start [min-players]` to start!.",
+  usage: ['synopsis [start | round | leaderboard | end]'],
 };

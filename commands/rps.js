@@ -1,4 +1,4 @@
-module.exports.execute = async (client, message, args) => {
+module.exports.execute = async (client, message) => {
   try {
     message.channel.send('**Rock...**');
     setTimeout(function () {
@@ -15,7 +15,7 @@ module.exports.execute = async (client, message, args) => {
 module.exports.config = {
   name: 'rockpaperscissors',
   aliases: ['rps'],
-  module: "Games",
+  module: 'Games',
   description: 'Starts a rock paper scissors game.',
-  usage: ['rockpaperscissors']
+  usage: ['rockpaperscissors'],
 };
