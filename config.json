@@ -1,5 +1,5 @@
 {
-  "prefix": ".",
+  "prefix": "..",
   "modules": ["Utility", "Fun", "Games", "Writing"],
   "version": "2.2.3",
   "versioninfo": "Added the bookmark feature! Use :red_bookmark: to bookmark any message. Added welcome feature.",
